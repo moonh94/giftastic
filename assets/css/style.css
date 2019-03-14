@@ -1,0 +1,12 @@
+body{
+    background: rgb(235, 229, 229);
+}
+
+button {
+    padding: 10px;
+    width: 100px;
+    display: inline-block;
+}
+#image-display{
+    display: inline-block;
+}

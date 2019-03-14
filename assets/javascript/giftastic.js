@@ -1,4 +1,6 @@
-var topics = ["dog", "cat", "dancing", "baby"];
+
+
+var topics = ["fail","dog", "cat", "dancing", "baby", "frog", "laughing", "crying", "glare", "mood", "trending", "puns"];
 
 
 
@@ -42,20 +44,40 @@ function displayGIF() {
             var rating = results[i].rating;
             var p =$("<p>").text("Rating: " + rating);
             var searchImage =$("<img>");
+            //I would change the images link below to images.fixed_height_still.url to pause gifs
             searchImage.attr("src", results[i].images.fixed_height.url);
             searchDiv.prepend(p, searchImage);
             $("image-display").prepend(searchDiv);
 
 $("#image-display").prepend(searchDiv);
-        // }
-    
+       
         }
     })    
 
 }
 
 
+//MY ATTEMPT AT PAUSING GIFS
+// $(".gif").on("click", function() {
+//     var state =$(this).attr("data-state");
+//     var stillURL=$(this).attr("data-still");
+//     stillURL.attr("src", results[i].images.fixed_height_still.url);
+//     var animatedURL=$(this).attr("data-aniamte");
+//     animatedURL.attr("src", results[i].images.fixed_height.url);
 
+// if (state) {
+//     $(this).attr({
+//         "src": animatedURL,
+//         "data-state": "animate",
+//     }) 
+
+//     } else { 
+//         $(this).attr({
+//             "scr": stillURL,
+//             "data-state": "still",
+//         })
+//     }
+// })
 
 
 
